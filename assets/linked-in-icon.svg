@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="16" cy="16" r="16" transform="translate(297 674)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="linked-in-icon" transform="translate(-297 -674)" clip-path="url(#clip-path)">
+    <g id="Rectangle_25" data-name="Rectangle 25" transform="translate(291 668)" fill="#0288d1" stroke="#707070" stroke-width="1">
+      <rect width="43.333" height="44" stroke="none"/>
+      <rect x="0.5" y="0.5" width="42.333" height="43" fill="none"/>
+    </g>
+    <g id="icons8-linkedin" transform="translate(301 678)">
+      <path id="Path_5" data-name="Path 5" d="M30,26.667A3.333,3.333,0,0,1,26.667,30H9.333A3.333,3.333,0,0,1,6,26.667V9.333A3.333,3.333,0,0,1,9.333,6H26.667A3.333,3.333,0,0,1,30,9.333Z" transform="translate(-6 -6)" fill="#0288d1"/>
+      <path id="Path_6" data-name="Path 6" d="M12,16.667h3.333V28H12Zm1.657-1.333h-.019A1.6,1.6,0,0,1,12,13.666a1.667,1.667,0,1,1,1.657,1.667ZM28,28H24.667V21.934a2.174,2.174,0,0,0-2.128-2.465,1.911,1.911,0,0,0-1.8,1.327,4.808,4.808,0,0,0-.067,1.2v6H17.333V16.667h3.333v1.744a3.372,3.372,0,0,1,3.159-1.744c2.385,0,4.174,1.5,4.174,4.849V28Z" transform="translate(-8 -8)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

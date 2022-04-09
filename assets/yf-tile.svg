@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" height="280" viewBox="0 0 440 280">
+  <defs>
+    <clipPath id="clip-Small_Promo_Tile">
+      <rect width="440" height="280"/>
+    </clipPath>
+  </defs>
+  <g id="Small_Promo_Tile" data-name="Small Promo Tile" clip-path="url(#clip-Small_Promo_Tile)">
+    <rect width="440" height="280" fill="#fff"/>
+    <g id="Logo" transform="translate(-346.975 -639.252)">
+      <g id="_16" data-name="16" transform="translate(410 603.337)">
+        <path id="Path_10" data-name="Path 10" d="M-71.025-102.632H184.1v232.35L156.5,220.47l-1,243.207H-71.025Z" transform="translate(0 0.239)" fill="red"/>
+        <path id="Path_11" data-name="Path 11" d="M39.5-78.844v-37.9H67.666V-134.68H39.5v-17.043H73.959v-18.443H18.268l-1.315,3.724-5.914,1.927v85.67Z" transform="translate(144.799 299.699)"/>
+        <path id="Path_12" data-name="Path 12" d="M49.972-78.844V-114.2l28.012-55.963H50.906L36.9-137.733h-.311L23.361-170.166H-4.029l27.7,55.963v35.359Z" transform="translate(106.183 299.699)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
