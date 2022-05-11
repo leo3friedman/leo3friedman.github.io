@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="es-icon" transform="translate(-351 -936)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="16" cy="16" r="16" transform="translate(351 936)" fill="#f1a33b"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="12.121" cy="12.121" r="12.121" transform="translate(354.879 939.879)"/>
+    <path id="Polygon_1" data-name="Polygon 1" d="M6.889,1.519a1,1,0,0,1,1.736,0L14.66,12.08a1,1,0,0,1-.868,1.5H1.723a1,1,0,0,1-.868-1.5Z" transform="translate(375.242 944.727) rotate(90)" fill="#f1a33b"/>
+  </g>
+</svg>

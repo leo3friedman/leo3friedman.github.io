@@ -3,232 +3,353 @@
   <head>
     <meta charset="UTF-8" />
     <title>Leo Friedman's Website</title>
+    <script src="main.js"></script>
   </head>
   <style>
-    section {
-      max-width: 800px;
-      font-family: Montserrat, monospace;
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      margin: 0;
       display: flex;
-      margin-left: auto;
-      margin-right: auto;
+    }
+    #sidebar {
+      overflow: hidden;
+      width: 224px;
+      padding: 32px;
+      height: 100%;
+      position: fixed;
+      border-right: solid;
+      border-color: grey;
+      background-color: white;
+      z-index: 2;
+    }
+    #name {
       margin-top: 0;
-      padding-bottom: 32px;
-    }
-    #bio-and-contact {
-      color: grey;
-      max-width: 500px;
-      font-size: 24px;
-    }
-    #headshot-and-contact {
-      margin-right: 32px;
-    }
-    #about-me {
-      border-bottom: solid;
-      border-width: thick;
-    }
-    #headshot {
-      width: 300px;
-      height: 375px;
-    }
-    .header {
-      margin-right: auto;
-      text-align: center;
-      margin-left: auto;
-      margin-bottom: 0;
+      text-align: right;
       font-family: Montserrat, monospace;
       font-weight: normal;
-      max-width: 800px;
-      font-size: 48px;
+      font-size: 32px;
     }
-    #introduction {
-      font-size: 64px;
+    #navigation {
+      margin-top: 0;
+      list-style-type: none;
+      text-align: right;
+      font-size: 24px;
+      font-family: Montserrat, monospace;
+      font-weight: normal;
     }
-
-    #social-media {
-      margin-top: 8px;
-      margin-bottom: 0;
+    .li-nav {
+      padding: 4px;
+    }
+    .li-nav:hover {
+      cursor: pointer;
+      color: cornflowerblue !important;
+    }
+    #blog-nav {
+      color: cornflowerblue;
+    }
+    #socials {
+      margin-top: 0;
       display: flex;
-      padding: 0;
-      max-width: 200px;
-    }
-    ol {
+      float: right;
       list-style-type: none;
     }
-    li {
-      margin-right: 16px;
+    .social {
+      margin-left: 16px;
     }
-    .icon {
-      width: 48px;
+    .social:hover {
+      cursor: pointer;
     }
-    #contact {
-      display: flex;
-    }
-    .app {
+    .right-section {
+      width: 100%;
+      height: 100%;
+      margin-left: 292px;
+      padding: 64px;
+      padding-top: 32px;
       background-color: #f9fafa;
-      display: flex;
-      padding: 24px;
-      border-bottom: solid;
-      border-color: grey;
-      border-width: thin;
-    }
-    .tile {
-      width: 220px;
-    }
-    .app-description {
-      margin-left: 24px;
-    }
-    .app-title {
       font-family: Montserrat, monospace;
-      font-weight: 100;
-      font-size: 20px;
+      font-weight: normal;
+    }
+    .right-section-header {
+      font-weight: normal;
+      font-size: 40px;
       margin-top: 0;
     }
-    .app-bio {
-      margin-left: 0;
-      font-family: Montserrat, monospace;
-      font-weight: 100;
-      color: grey;
-      font-size: 16px;
+    #post-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
     }
-    .github-repo-link {
-      z-index: 3;
+    .post {
+      padding: 16px;
+      max-width: 688px;
+      background-color: white;
+      border: solid;
+      border-color: grey;
+      border-radius: 4px;
+    }
+    #about-me {
+      display: none;
+    }
+
+    #about-me-contents {
+      font-size: 18px;
+      max-width: 664px;
+    }
+
+    #headshot-img {
+      width: 564px;
+    }
+
+    #resume {
+      display: none;
+    }
+    /*#blog {*/
+    /*  display: none;*/
+    /*}*/
+    #resume-content {
+      background-color: white;
+      max-width: 816px;
+      margin-bottom: 64px;
+      padding: 16px;
+      display: block;
+      border: solid;
+      border-color: grey;
+      border-radius: 4px;
+    }
+    #resume-ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .resume-li {
+      margin-bottom: 32px;
+    }
+    .resume-head {
+      padding-bottom: 4px;
+      border-bottom: solid;
+      border-color: grey;
+      font-size: 24px;
+    }
+    .resume-paragraph {
+      margin-top: 12px;
+    }
+    #download-image {
+      margin-left: 8px;
+    }
+    #download-image:hover {
+      filter: invert(75%) sepia(43%) saturate(6902%) hue-rotate(196deg)
+        brightness(98%) contrast(89%);
+    }
+    .date {
+      float: right;
+    }
+    #apps-ul {
+      margin-top: 12px;
+      padding: 0;
+      margin-left: 0;
+      list-style: none;
+    }
+    .icon-li {
+      display: flex;
+      margin-bottom: 12px;
+    }
+    .app-img {
+      max-height: 24px;
+    }
+    .app-description {
+      margin-left: 12px;
+    }
+    #proficiencies-ul {
+      list-style: none;
+      margin-top: 12px;
+      margin-left: 0;
+      padding: 0;
+    }
+    .proficiency-li {
+      margin-bottom: 12px;
     }
   </style>
   <body>
-    <h1 class="header" id="introduction">Hi 👋 I'm Leo Friedman</h1>
-    <section id="about-me">
-      <div id="headshot-and-contact">
-        <img
-          class="section-chunk"
-          id="headshot"
-          src="assets/headshot-transparent.png"
-          alt="Leo Friedman"
-        />
-      </div>
-
-      <div id="bio-and-contact">
-        <p id="biography">
-          I'm a computer science engineering student at the University of
-          California San Diego 👨‍💻 with a passion for web based software
-          development. I'm experienced in building web applications with
-          JavaScript / HTML / CSS / NodeJS. My primary fields of interest
-          include Web3, blockchain, and graphic design. Here's my
-          <a href="assets/resume-ats.pdf" target="_blank">resume!</a>
-        </p>
-        <div id="contact">
-          <ol id="social-media">
-            <li>
-              <a href="https://github.com/leo3friedman" target="_blank">
-                <img class="icon" src="assets/github-icon.svg" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/leo-friedman-74b430214/"
-                target="_blank"
-                ><img class="icon" src="assets/linked-in-icon.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="mailto:lcfriedman@ucsd.edu" target="_blank">
-                <img class="icon" src="assets/mail-icon.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="https://t.me/leo3friedman" target="_blank">
-                <img class="icon" src="assets/telegram-icon.svg" />
-              </a>
-            </li>
-          </ol>
-        </div>
-      </div>
+    <section id="sidebar">
+      <h1 id="name">Leo Friedman</h1>
+      <ol id="navigation">
+        <li class="li-nav" id="blog-nav">Blog</li>
+        <li class="li-nav" id="me-nav">About Me</li>
+        <li class="li-nav" id="resume-nav">Resume</li>
+      </ol>
+      <ul id="socials">
+        <li class="social">
+          <a href="https://github.com/leo3friedman" target="_blank"
+            ><img id="github-img" src="assets/github-grey.svg"
+          /></a>
+        </li>
+        <li class="social">
+          <a
+            href="https://www.linkedin.com/in/leo-friedman-74b430214/"
+            target="_blank"
+            ><img id="linkedin-img" src="assets/linkedin-grey.svg"
+          /></a>
+        </li>
+        <li class="social">
+          <a href="mailto:lcfriedman@ucsd.edu"
+            ><img id="gmail-img" src="assets/gmail-grey.svg"
+          /></a>
+        </li>
+      </ul>
     </section>
-    <h1 class="header">Check out some apps I've built 🏗</h1>
-    <section>
-      <ol>
-        <li class="app">
-          <a
-            href="https://chrome.google.com/webstore/detail/youfocus-hide-youtube-dis/kbcdmkcnmpolhhhpeohepljeccihfngl"
-            target="_blank"
-          >
-            <img class="tile" src="assets/yf-tile.svg" />
-          </a>
-          <div class="app-description">
-            <h3 class="app-title">YouFocus - Hide YouTube Distractions</h3>
-            <p class="app-bio">
-              Customizable productivity tool that hides distracting
-              recommendations and popups on YouTube
-            </p>
-            <a
-              class="github-repo-link"
-              href="https://github.com/leo3friedman/you-focus"
-              target="_blank"
-              >[GitHub Repository]
-            </a>
-          </div>
-        </li>
-        <li class="app">
-          <a
-            href="https://chrome.google.com/webstore/detail/distractionfree-hide-ads/odcfkbelojggbegkkdmeeahajdmnloil"
-            target="_blank"
-          >
-            <img class="tile" src="assets/dfs-tile.svg" />
-          </a>
-          <div class="app-description">
-            <h3 class="app-title">DistractionFree - Hide ads on SparkNotes</h3>
-            <p class="app-bio">
-              Removes aggressive and distracting elements from online SparkNotes
-              articles.
-            </p>
-            <a
-              class="github-repo-link"
-              href="https://github.com/leo3friedman/distraction-free-sparknotes"
-              target="_blank"
-              >[GitHub Repository]
-            </a>
-          </div>
-        </li>
-        <li class="app">
-          <a
-            href="https://chrome.google.com/webstore/detail/eye-saver-20-20-20-break/mhfodjdadffkgglbjdlnfakpohhemdga"
-            target="_blank"
-          >
-            <img class="tile" src="assets/es-tile.svg" />
-          </a>
-          <div class="app-description">
-            <h3 class="app-title">Eye Saver - 20-20-20 Break Reminder</h3>
-            <p class="app-bio">
-              User-friendly, break-reminder system to combat eye strain.
-            </p>
-            <a
-              class="github-repo-link"
-              href="https://github.com/leo3friedman/eye-saver"
-              target="_blank"
-              >[GitHub Repository]
-            </a>
-          </div>
-        </li>
-        <li class="app">
-          <a
-            href="https://chrome.google.com/webstore/detail/discord-joiner/kpofjapfdgcjgdiekkiehagbmjlbknoa"
-            target="_blank"
-          >
-            <img class="tile" src="assets/dj-tile.svg" />
-          </a>
-          <div class="app-description">
-            <h3 class="app-title">Discord Joiner</h3>
-            <p class="app-bio">
-              Lightweight extension to join discord invite links.
-            </p>
-            <a
-              class="github-repo-link"
-              href="https://github.com/leo3friedman/discord-joiner"
-              target="_blank"
-              >[GitHub Repository]
-            </a>
-          </div>
+    <section class="right-section" id="blog">
+      <h1 class="right-section-header">Blog 📓</h1>
+      <ol id="post-list">
+        <li class="post">
+          <h2 class="post-header">My First Blog Post!</h2>
+          <p class="post-description">Blah Blah Blah Blah</p>
         </li>
       </ol>
+    </section>
+    <section class="right-section" id="about-me">
+      <h1 class="right-section-header">About Me 👨‍💻</h1>
+      <div id="about-me-contents">
+        <img id="headshot-img" src="assets/image-prototype.svg" />
+        <p>Hi 👋 I'm Leo</p>
+        <p>
+          I'm a computer science engineering student 🧑‍🎓 at the University of
+          California San Diego with a passion for web-based software
+          development.
+        </p>
+        <p>
+          I like to build web applications 🚀 with JavaScript / HTML / CSS /
+          NodeJS. Right now, I'm most interested in Web3, blockchain, and
+          graphic design.
+        </p>
+        <p>
+          In my spare time, I like to work out at the gym, play Spikeball®, and
+          watch movies.
+        </p>
+      </div>
+    </section>
+    <section class="right-section" id="resume">
+      <h1 class="right-section-header">My Resume 📄</h1>
+      <div id="resume-content">
+        <ol id="resume-ol">
+          <li class="resume-li">
+            <span>Download as PDF</span>
+
+            <a href="/assets/resume-ats.pdf" download="leo-friedman-resume"
+              ><img id="download-image" src="assets/download.svg"
+            /></a>
+          </li>
+          <li class="resume-li">
+            <div class="resume-head">Objective</div>
+            <div class="resume-paragraph">
+              Interested in web development and blockchain-technology.
+            </div>
+          </li>
+          <li class="resume-li">
+            <div class="resume-head">Education</div>
+            <div class="resume-paragraph">
+              <div>
+                University of California San Diego
+                <span class="date">Sep 2021 - Jun 2025</span>
+              </div>
+              <div><i>Computer Science Engineering</i></div>
+              <ul>
+                <li>Cumulative GPA: 3.96/4.0</li>
+                <li>Regents Scholar Award</li>
+                <li>Blockchain of San Diego - Internal Engineering Team</li>
+                <li>UCSD Scholars Society - Member</li>
+              </ul>
+            </div>
+            <div class="resume-paragraph">
+              <div>
+                La Jolla High School
+                <span class="date">Aug 2017 - June 2021</span>
+              </div>
+              <div><i>High School Diploma</i></div>
+              <ul>
+                <li>Cumulative GPA: 4.0/4.0</li>
+                <li>National Merit Finalist</li>
+                <li>LJHS Academic Distinction Diploma</li>
+                <li>1500 SAT Score</li>
+              </ul>
+            </div>
+          </li>
+          <li class="resume-li">
+            <div class="resume-head">Experience</div>
+            <div class="resume-paragraph">
+              <div>
+                Chrome Web Store Developer
+                <span class="date">Apr 2021 - Present</span>
+              </div>
+              <div>
+                <i>I independently built the following apps:</i>
+              </div>
+              <ul id="apps-ul">
+                <li class="icon-li">
+                  <img class="app-img" src="assets/yf-icon.svg" /><span
+                    class="app-description"
+                    ><a
+                      href="https://chrome.google.com/webstore/detail/youfocus-hide-youtube-dis/kbcdmkcnmpolhhhpeohepljeccihfngl"
+                      target="_blank"
+                      >YouFocus:</a
+                    >
+                    Disables recommendations to boost productivity on
+                    YouTube.</span
+                  >
+                </li>
+                <li class="icon-li">
+                  <img class="app-img" src="assets/dfs-icon.svg" />
+                  <span class="app-description"
+                    ><a
+                      href="https://chrome.google.com/webstore/detail/distractionfree-hide-ads/odcfkbelojggbegkkdmeeahajdmnloil"
+                      target="_blank"
+                      >DistractionFree – Hide ads on SparkNotes:</a
+                    >
+                    Removes distracting elements from online articles.</span
+                  >
+                </li>
+                <li class="icon-li">
+                  <img class="app-img" src="assets/es-icon.svg" />
+                  <span class="app-description"
+                    ><a
+                      href="https://chrome.google.com/webstore/detail/eye-saver-20-20-20-break/mhfodjdadffkgglbjdlnfakpohhemdga"
+                      target="_blank"
+                      >Eye Saver - 20-20-20 Break Reminder:</a
+                    >
+                    break-reminder system to combat eye strain.</span
+                  >
+                </li>
+                <li class="icon-li">
+                  <img class="app-img" src="assets/dj-icon.svg" /><span
+                    class="app-description"
+                    ><a
+                      href="https://chrome.google.com/webstore/detail/discord-joiner/kpofjapfdgcjgdiekkiehagbmjlbknoa"
+                      target="_blank"
+                      >Discord Joiner:</a
+                    >
+                    Lightweight extension to join discord invite links.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="resume-li">
+            <div class="resume-head">Proficiencies</div>
+            <div class="resume-paragraph">
+              <ul id="proficiencies-ul">
+                <li class="proficiency-li">
+                  Languages: JavaScript, Java, HTML5/CSS3, C
+                </li>
+                <li class="proficiency-li">
+                  Applications: GitHub, Adobe XD, Adobe Photoshop, Figma
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
   </body>
 </html>
