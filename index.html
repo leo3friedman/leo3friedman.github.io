@@ -11,9 +11,6 @@
     />
   </head>
   <style>
-    html {
-      height: 100%;
-    }
     body {
       height: 100%;
       margin: 0;
@@ -93,6 +90,10 @@
       padding: 16px;
       box-shadow: 10px 10px black;
     }
+    .post:hover {
+      cursor: pointer;
+      background-color: #f4fbf4;
+    }
     .post-image {
       width: 256px;
     }
@@ -106,7 +107,7 @@
       margin-top: 4px;
     }
     .post-description {
-      margin-top: 8px;
+      margin-top: 24px;
     }
     #yf-tile {
       border: solid;
@@ -225,33 +226,51 @@
     <section class="right-section" id="blog">
       <div id="timeline-content">
         <ol id="post-list">
-          <li class="post">
+          <li
+            onclick="
+            window.open(
+              'https://chrome.google.com/webstore/detail/eye-saver-20-20-20-break/mhfodjdadffkgglbjdlnfakpohhemdga', '_blank');"
+            class="post"
+            class="post"
+          >
             <img class="post-image" src="assets/es-tile.svg" />
             <div class="post-text">
               <h2 class="post-title">Published Eye Saver</h2>
-              <span class="post-date">12 October 2021</span>
+              <span class="post-date">7 June 2021</span>
               <p class="post-description">
-                My first ever published app! YouFocus is a Chrome Extension that
-                enhances productivity on YouTube by hiding distracting elements.
+                Eye Saver is an app that helps combat eye strain. It reminds you
+                every 20 minutes to look away from the screen!
               </p>
             </div>
           </li>
-          <li class="post">
+          <li
+            onclick="
+            window.open(
+              'https://chrome.google.com/webstore/detail/distractionfree-hide-ads/odcfkbelojggbegkkdmeeahajdmnloil', '_blank');"
+            class="post"
+          >
             <img class="post-image" src="assets/dfsn-tile.svg" />
             <div class="post-text">
               <h2 class="post-title">Published Distraction Free SparkNotes</h2>
-              <span class="post-date">12 October 2021</span>
+              <span class="post-date">16 Nov 2020</span>
               <p class="post-description">
-                My first ever published app! YouFocus is a Chrome Extension that
-                enhances productivity on YouTube by hiding distracting elements.
+                My second published Chrome Extension! Distraction Free
+                SparkNotes gets rid of all the annoying and distracting elements
+                in each article.
               </p>
             </div>
           </li>
-          <li class="post">
+          <li
+            onclick="
+            window.open(
+              'https://chrome.google.com/webstore/detail/youfocus-hide-youtube-dis/kbcdmkcnmpolhhhpeohepljeccihfngl', '_blank');"
+            class="post"
+            class="post"
+          >
             <img id="yf-tile" class="post-image" src="assets/yf-tile.svg" />
             <div class="post-text">
               <h2 class="post-title">Published YouFocus</h2>
-              <span class="post-date">12 October 2021</span>
+              <span class="post-date">12 October 2020</span>
               <p class="post-description">
                 My first ever published app! YouFocus is a Chrome Extension that
                 enhances productivity on YouTube by hiding distracting elements.
