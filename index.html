@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <title>Leo Friedman's Website</title>
     <script src="main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <style>
     html {
@@ -18,37 +23,38 @@
       overflow: hidden;
       width: 224px;
       padding: 32px;
+      padding-top: 64px;
       height: 100%;
       position: fixed;
-      border-right: solid;
-      border-color: grey;
-      background-color: white;
+      background-color: #8496b3;
       z-index: 2;
     }
     #name {
       margin-top: 0;
       text-align: right;
-      font-family: Montserrat, monospace;
+      font-family: "Source Code Pro", monospace;
       font-weight: normal;
-      font-size: 32px;
+      font-size: 31px;
+      margin-bottom: 32px;
     }
     #navigation {
       margin-top: 0;
       list-style-type: none;
       text-align: right;
       font-size: 24px;
-      font-family: Montserrat, monospace;
+      font-family: "Source Code Pro", monospace;
       font-weight: normal;
+      margin-bottom: 32px;
     }
     .li-nav {
       padding: 4px;
     }
     .li-nav:hover {
       cursor: pointer;
-      color: cornflowerblue !important;
+      text-decoration: underline !important;
     }
     #blog-nav {
-      color: cornflowerblue;
+      text-decoration: underline;
     }
     #socials {
       margin-top: 0;
@@ -65,17 +71,13 @@
     .right-section {
       width: 100%;
       height: 100%;
-      margin-left: 292px;
-      padding: 64px;
-      padding-top: 32px;
-      background-color: #f9fafa;
-      font-family: Montserrat, monospace;
+      margin-left: 288px;
+      font-family: "Source Code Pro", monospace;
+      background-color: #fffaf0;
       font-weight: normal;
     }
-    .right-section-header {
-      font-weight: normal;
-      font-size: 40px;
-      margin-top: 0;
+    #timeline-content {
+      padding: 64px;
     }
     #post-list {
       margin: 0;
@@ -83,12 +85,33 @@
       list-style-type: none;
     }
     .post {
-      padding: 16px;
-      max-width: 688px;
+      width: 636px;
+      display: flex;
+      margin-bottom: 48px;
       background-color: white;
       border: solid;
-      border-color: grey;
-      border-radius: 4px;
+      padding: 16px;
+      box-shadow: 10px 10px black;
+    }
+    .post-image {
+      width: 256px;
+    }
+    .post-text {
+      margin-left: 32px;
+    }
+    .post-title {
+      margin: 0;
+    }
+    .post-date {
+      margin-top: 4px;
+    }
+    .post-description {
+      margin-top: 8px;
+    }
+    #yf-tile {
+      border: solid;
+      border-color: #ff0000;
+      box-sizing: border-box;
     }
     #about-me {
       display: none;
@@ -97,27 +120,26 @@
     #about-me-contents {
       font-size: 18px;
       max-width: 664px;
+      margin: 64px;
     }
 
     #headshot-img {
       width: 564px;
     }
 
+    #greeting {
+      font-size: 24px;
+    }
+
     #resume {
       display: none;
     }
-    /*#blog {*/
-    /*  display: none;*/
-    /*}*/
+
     #resume-content {
-      background-color: white;
+      /*background-color: white;*/
       max-width: 816px;
-      margin-bottom: 64px;
-      padding: 16px;
+      padding: 64px;
       display: block;
-      border: solid;
-      border-color: grey;
-      border-radius: 4px;
     }
     #resume-ol {
       list-style: none;
@@ -176,7 +198,7 @@
     <section id="sidebar">
       <h1 id="name">Leo Friedman</h1>
       <ol id="navigation">
-        <li class="li-nav" id="blog-nav">Blog</li>
+        <li class="li-nav" id="blog-nav">Timeline</li>
         <li class="li-nav" id="me-nav">About Me</li>
         <li class="li-nav" id="resume-nav">Resume</li>
       </ol>
@@ -201,28 +223,58 @@
       </ul>
     </section>
     <section class="right-section" id="blog">
-      <h1 class="right-section-header">Blog 📓</h1>
-      <ol id="post-list">
-        <li class="post">
-          <h2 class="post-header">My First Blog Post!</h2>
-          <p class="post-description">Blah Blah Blah Blah</p>
-        </li>
-      </ol>
+      <div id="timeline-content">
+        <ol id="post-list">
+          <li class="post">
+            <img class="post-image" src="assets/es-tile.svg" />
+            <div class="post-text">
+              <h2 class="post-title">Published Eye Saver</h2>
+              <span class="post-date">12 October 2021</span>
+              <p class="post-description">
+                My first ever published app! YouFocus is a Chrome Extension that
+                enhances productivity on YouTube by hiding distracting elements.
+              </p>
+            </div>
+          </li>
+          <li class="post">
+            <img class="post-image" src="assets/dfsn-tile.svg" />
+            <div class="post-text">
+              <h2 class="post-title">Published Distraction Free SparkNotes</h2>
+              <span class="post-date">12 October 2021</span>
+              <p class="post-description">
+                My first ever published app! YouFocus is a Chrome Extension that
+                enhances productivity on YouTube by hiding distracting elements.
+              </p>
+            </div>
+          </li>
+          <li class="post">
+            <img id="yf-tile" class="post-image" src="assets/yf-tile.svg" />
+            <div class="post-text">
+              <h2 class="post-title">Published YouFocus</h2>
+              <span class="post-date">12 October 2021</span>
+              <p class="post-description">
+                My first ever published app! YouFocus is a Chrome Extension that
+                enhances productivity on YouTube by hiding distracting elements.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
     <section class="right-section" id="about-me">
-      <h1 class="right-section-header">About Me 👨‍💻</h1>
       <div id="about-me-contents">
+        <p id="greeting">Hi 👋 I'm Leo</p>
         <img id="headshot-img" src="assets/image-prototype.svg" />
-        <p>Hi 👋 I'm Leo</p>
+
         <p>
-          I'm a computer science engineering student 🧑‍🎓 at the University of
+          I'm a computer science engineering student at the University of
           California San Diego with a passion for web-based software
           development.
         </p>
         <p>
-          I like to build web applications 🚀 with JavaScript / HTML / CSS /
-          NodeJS. Right now, I'm most interested in Web3, blockchain, and
-          graphic design.
+          I like to build web applications with JavaScript / HTML / CSS /
+          NodeJS. Right now, I'm most interested in Web3, blockchain, and web
+          development.
         </p>
         <p>
           In my spare time, I like to work out at the gym, play Spikeball®, and
@@ -231,7 +283,6 @@
       </div>
     </section>
     <section class="right-section" id="resume">
-      <h1 class="right-section-header">My Resume 📄</h1>
       <div id="resume-content">
         <ol id="resume-ol">
           <li class="resume-li">

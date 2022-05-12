@@ -34,27 +34,33 @@ window.onload = () => {
   });
 
   blogButton.onclick = () => {
-    blogButton.style.color = "cornflowerblue";
-    meButton.style.color = "black";
-    resumeButton.style.color = "black";
-    blogSection.style.display = "block";
-    meSection.style.display = "none";
-    resumeSection.style.display = "none";
+    setTimeout(function () {
+      blogButton.style.textDecoration = "underline";
+      meButton.style.textDecoration = "none";
+      resumeButton.style.textDecoration = "none";
+      blogSection.style.display = "block";
+      meSection.style.display = "none";
+      resumeSection.style.display = "none";
+    }, 80);
   };
   meButton.onclick = () => {
-    meButton.style.color = "cornflowerblue";
-    blogButton.style.color = "black";
-    resumeButton.style.color = "black";
-    meSection.style.display = "block";
-    blogSection.style.display = "none";
-    resumeSection.style.display = "none";
+    setTimeout(function () {
+      meButton.style.textDecoration = "underline";
+      blogButton.style.textDecoration = "none";
+      resumeButton.style.textDecoration = "none";
+      meSection.style.display = "block";
+      blogSection.style.display = "none";
+      resumeSection.style.display = "none";
+    }, 80);
   };
   resumeButton.onclick = () => {
-    resumeButton.style.color = "cornflowerblue";
-    blogButton.style.color = "black";
-    meButton.style.color = "black";
-    resumeSection.style.display = "block";
-    blogSection.style.display = "none";
-    meSection.style.display = "none";
+    setTimeout(function () {
+      resumeButton.style.textDecoration = "underline";
+      blogButton.style.textDecoration = "none";
+      meButton.style.textDecoration = "none";
+      resumeSection.style.display = "block";
+      blogSection.style.display = "none";
+      meSection.style.display = "none";
+    }, 80);
   };
 };
