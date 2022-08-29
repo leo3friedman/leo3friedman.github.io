@@ -24,10 +24,6 @@ body {
   margin-top: 16px;
 }
 
-dd {
-  margin-left: 0;
-}
-
 .contact-icon {
   width: 32px;
 }
@@ -38,10 +34,24 @@ dd {
 
 section {
   margin-left: 258px;
-  padding: 32px 16px 0;
+  padding: 32px;
   max-width: 768px;
 }
 
 .section-header {
   margin: 0;
+}
+
+.about-me-paragraph {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.credentials-header {
+  width: 100%;
+  border-bottom: solid 1px;
+}
+
+.date {
+  float: right;
 }
