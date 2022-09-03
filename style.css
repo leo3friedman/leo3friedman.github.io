@@ -102,6 +102,10 @@ dd {
   list-style-type: none;
 }
 
+.project {
+  margin-top: 16px;
+}
+
 .project > * {
   display: inline-block;
   vertical-align: top;
@@ -109,4 +113,5 @@ dd {
 
 .project-description {
   margin: 0 0 0 16px;
+  max-width: 512px;
 }
