@@ -87,12 +87,6 @@ section {
   margin-bottom: 0;
 }
 
-.credentials-header {
-  width: 100%;
-  border-bottom: solid 1px;
-  font-weight: normal;
-}
-
 .date {
   float: right;
 }
