@@ -48,9 +48,6 @@ body {
   .headshot-image {
     display: inline-block;
   }
-  .typing-description {
-    display: none;
-  }
   .author-name {
     display: inline-block;
   }
@@ -93,13 +90,16 @@ section {
 .credentials-header {
   width: 100%;
   border-bottom: solid 1px;
+  font-weight: normal;
 }
 
 .date {
   float: right;
 }
 
-.projects-container {
+dd {
+  display: list-item;
+  list-style-type: circle;
 }
 
 .project {
