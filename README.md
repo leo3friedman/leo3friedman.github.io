@@ -2,5 +2,7 @@
 ###This Website Includes:
 - Contact information
 - Summary about me
-- My resume / credentials
+- My resume
+- My work experience
+- Information about my education
 - My personal projects

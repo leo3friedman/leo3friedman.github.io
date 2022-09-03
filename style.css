@@ -96,8 +96,17 @@ dd {
   list-style-type: circle;
 }
 
-.project {
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.project > * {
   display: inline-block;
-  margin-right: 16px;
-  margin-top: 16px;
+  vertical-align: top;
+}
+
+.project-description {
+  margin: 0 0 0 16px;
 }
