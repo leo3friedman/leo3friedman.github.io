@@ -1,5 +1,5 @@
-#Leo Friedman's Portfolio Website
-###This Website Includes:
+# Leo Friedman's Portfolio Website
+### This Website Includes:
 - Contact information
 - Summary about me
 - My resume
