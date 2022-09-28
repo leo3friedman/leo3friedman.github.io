@@ -1,5 +1,9 @@
 # Leo Friedman's Portfolio Website
-### This Website Includes:
+*A work in progress...*
+
+A website to learn a little more about me!
+
+It includes: 
 - Contact information
 - Summary about me
 - My resume
