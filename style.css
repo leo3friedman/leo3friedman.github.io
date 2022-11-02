@@ -85,6 +85,11 @@ section {
   margin: 0;
 }
 
+.surfing-image {
+  margin-top: 16px;
+  max-width: 600px;
+}
+
 .about-me-paragraph {
   margin-top: 16px;
   margin-bottom: 0;
