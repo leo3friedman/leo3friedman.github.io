@@ -40,6 +40,7 @@ a {
 .contact-list li {
   display: inline-block;
   margin-right: 8px;
+  margin-top: 8px;
 }
 
 @media (max-width: 1088px) {
@@ -61,6 +62,11 @@ a {
 
   .headshot-image {
     width: 48px;
+  }
+
+  .contact-list li {
+    margin-top: 0;
+    display: inline-block;
   }
 
   .sections-wrapper {
