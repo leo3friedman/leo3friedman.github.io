@@ -4,7 +4,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 a {
@@ -75,6 +75,7 @@ a {
 .sections-wrapper {
   margin-left: 258px;
   padding: 32px;
+  width: 600px;
 }
 
 section {
@@ -88,26 +89,18 @@ section {
 
 .surfing-image {
   margin-top: 16px;
-  max-width: 600px;
+  width: 100%;
 }
 
 .about-me-paragraph {
   margin-top: 16px;
   margin-bottom: 0;
-  max-width: 600px;
+  width: 100%;
   font-size: 16px;
   font-weight: 300;
-}
-
-.date {
-  float: right;
 }
 
 dd {
   display: list-item;
   list-style-type: circle;
-}
-
-.project-list {
-  list-style-type: none;
 }
