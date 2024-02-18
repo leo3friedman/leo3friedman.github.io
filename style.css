@@ -30,6 +30,7 @@ a {
   margin-top: 16px;
   padding: 0;
   list-style: none;
+  white-space: auto;
 }
 
 .contact-list li {
@@ -57,6 +58,10 @@ a {
 
   .author-name {
     font-size: 32px;
+  }
+
+  .contact-list {
+    white-space: nowrap;
   }
 
   .contact-list li {
